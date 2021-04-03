@@ -1,3 +1,5 @@
+ /* Geral */
+
 * {
     font-family: 'Kumbh Sans', sans-serif;
 }
@@ -24,6 +26,10 @@ body {
     margin: auto;
     display: flex;
     border-radius: 15px;
+}
+
+.img-mobile {
+    display: none;
 }
 
 .imagens-left,
@@ -78,10 +84,14 @@ body {
 
 .pergunta {
     border-bottom: 1px solid #e8e8e8;
-    width: 90%;
+    width: 95%;
     position: relative;
     padding-bottom: 1rem;
     margin-bottom: 1rem;
+}
+
+.inner-pergunta {
+    width: 90%;
 }
 
 .pergunta input {
@@ -140,4 +150,97 @@ body {
     -o-transition: transform 0.3s ease-in-out;
     -ms-transition: transform 0.3s ease-in-out;
     transition: transform 0.3s ease-in-out;
+}
+
+/* Responsive */
+
+@media only screen and (max-width: 769px) {
+
+    body {
+        height: auto;
+        overflow: unset;
+    }
+
+    .card-principal {
+        width: 50%;
+        height: auto;
+        margin-top: 10rem;
+        margin-bottom: 2rem;
+        display: grid;
+        padding: 1rem;
+        background-image: url(images/bg-pattern-mobile.svg);
+        background-size: 80%;
+        background-repeat: no-repeat;
+        position: relative;
+        background-position-y: 0rem;
+        background-position-x: center;
+    }
+
+    .imagens-left {
+        display: none;
+    }
+
+    .text-right {
+        width: 100%;
+        padding: 0;
+    }
+
+    .faq-title h1 {
+        text-align: center;
+        margin-top: 9rem;
+        font-size: 2.5rem;
+    }
+
+    .pergunta {
+        width: 100%;
+    }
+
+    .pergunta label:hover {
+        color: #2d2b41;
+    }
+
+    .resposta p {
+        line-height: 1.5;
+    }
+
+    .img-mobile {
+        display: block;
+        position: relative;
+    }
+
+    .img-mobile img {
+        position: absolute;
+        top: -10rem;
+        width: 100%;
+    }
+
+    .faq-title {
+        margin-top: 5rem;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .card-principal {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 376px) {
+    .img-mobile img {
+        top: -9rem;
+    }
+
+    .faq-title h1 {
+        margin-top: 7rem;
+    }
+}
+
+@media only screen and (max-width: 321px) {
+    .img-mobile img {
+        top: -8rem;
+    }
+
+    .faq-title h1 {
+        margin-top: 6rem;
+    }
 }
